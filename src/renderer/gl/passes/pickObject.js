@@ -50,8 +50,8 @@
                     c_uniformCollection.sysBase["id"] = [c3 / 255.0, c2 / 255.0, c1 / 255.0];
                     c_uniformCollection.sysBase["modelViewProjectionMatrix"] = c_mvp;
 
-                    this.program.setUniformVariables(null, c_systemUniformNames, c_uniformCollection);
-                    mesh.draw(this.program);
+                    program.setUniformVariables(null, c_systemUniformNames, c_uniformCollection);
+                    mesh.draw(program);
                 }
                 program.unbind();
                 target.unbind();
