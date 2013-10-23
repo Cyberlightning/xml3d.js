@@ -14,7 +14,7 @@
 
             return function (scene) {
                 var gl = this.pipeline.context.gl,
-                    target = this.pipeline.getRenderTarget(this.output);
+                    target = this.output;
                 target.bind();
 
                 gl.enable(gl.DEPTH_TEST);
@@ -67,7 +67,7 @@
          * @returns {XML3D.webgl.RenderObject|null} Picked Object
          */
         getRenderObjectFromPickingBuffer: function (x, y, scene) {
-            var data = this.readPixelDataFromBuffer(x, y, this.pipeline.getRenderTarget(this.output));
+            var data = this.readPixelDataFromBuffer(x, y, this.output);
 
             if (!data)
                 return null;
